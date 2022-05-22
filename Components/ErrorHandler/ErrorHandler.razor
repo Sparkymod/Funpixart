@@ -1,0 +1,21 @@
+﻿@namespace RDK.Components.ErrorHandler
+
+@inject NavigationManager nav
+
+<div class="error-container">
+    <i class='bx bxs-error-circle'></i>
+    <span>Failed to load this component. <span @onclick=@(()=>Refresh()) style="color:#0dfd14; cursor:pointer;">Click here to refresh.</span></span>
+    <span>@ErrorMessage</span>
+</div>
+
+
+@code {
+    [Parameter]
+    public string ErrorMessage { get; set; } = "";
+
+    async Task Refresh()
+    {
+        nav.NavigateTo($"{nav.Uri}", forceLoad: true);
+        await Task.Delay(50);
+    }
+}

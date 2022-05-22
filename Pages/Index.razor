@@ -1,0 +1,25 @@
+﻿@page "/"
+@inject INotificationService NotificationService
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<button @onclick=Show>Show notification</button>
+
+@code{
+    void Show()
+    {
+        var message = new NotificationMessage()
+            {
+                Duration = 5000,
+                Severity = NotificationType.Warning,
+                Message = "Something went wrong.",
+                Footer = "Warning => [W01AC03]"
+            };
+
+        NotificationService.Notify(message);
+    }
+}

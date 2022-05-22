@@ -1,0 +1,31 @@
+﻿@namespace RDK.Components.Tools
+
+@inject NavigationManager NavManager
+
+﻿@if (IsLoaded)
+{
+    @ChildContent
+}
+else
+{
+    <div class="center_item">
+        <RDK.Components.Spinkit.Spinner CustomCss="width: 80px; height:80px;" />
+        <span>Loading...</span>
+    </div>
+}
+
+@code {
+    
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string LoginUrl { get; set; } = "/Login";
+    [Parameter] public bool ForceLoad { get; set; } = true;
+
+    private bool IsLoaded;
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        NavManager.NavigateTo($"{LoginUrl}", forceLoad: ForceLoad);
+        IsLoaded = true;
+        return Task.CompletedTask;
+    }
+}

@@ -1,0 +1,39 @@
+﻿@namespace RDK.Components.Boxes
+<!--Depends on the status it can be generated here-->
+<div class="box @GetStatus()">
+    <div class="indicator">
+        @RenderIcon
+    </div>
+    <div class="details">
+        <div class="number @GetStatus()">@ResultNumber</div>
+        <div class="box_topic">@StatusName</div>
+        <a href="@InfoUrl">
+            <div class="footer @GetStatus()">
+                <span>Más info </span>
+                <i class='bx bxs-right-arrow-circle'></i>
+            </div>
+        </a>
+    </div>
+</div>
+
+@code {
+    private RenderFragment RenderIcon => __builder =>
+        {
+            if (Status == 0)
+            {
+                <i class='bx bx-hourglass @GetStatus()'></i>
+            }
+            else if (Status == 1)
+            {
+                <i class='bx bx-car @GetStatus()'></i>
+            }
+            else if (Status == 2)
+            {
+                <i class='bx bxs-user-badge @GetStatus()'></i>
+            }
+            else if (Status == 3)
+            {
+                <i class='bx bx-user @GetStatus()'></i>
+            }
+        };
+}

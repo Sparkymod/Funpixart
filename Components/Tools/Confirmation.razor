@@ -1,0 +1,27 @@
+﻿@namespace RDK.Components.Tools
+
+@typeparam TEntity
+
+<Modal>
+    <Content>
+        <Boxflex Header="@BoxHeader">
+            <Content>
+                <form onsubmit=@(() => Execute.InvokeAsync(Item)) id="form-confirmation" class="boxflex-form-container">
+                    @ContentHeader
+                </form>
+            </Content>
+            <Footer>
+                <button class="btn-info" type="submit" form="form-confirmation">Yes</button>
+                <button class="btn-normal" @onclick="@ShowClose">No</button>
+            </Footer>
+        </Boxflex>
+    </Content>
+</Modal>
+
+@code {
+    [Parameter] public EventCallback<TEntity> Execute { get; set; }
+    [Parameter] public TEntity? Item { get; set; }
+    [Parameter] public EventCallback ShowClose { get; set; }
+    [Parameter] public string ContentHeader { get; set; } = "Are you sure?";
+    [Parameter] public string BoxHeader { get; set; } = "Confirm action";
+}

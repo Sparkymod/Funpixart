@@ -1,0 +1,47 @@
+﻿@namespace RDK.Components.Boxes
+
+<div class="box-flex-card" id=@BoxFlexId>
+    <div class="boxflex ">
+
+        <!-- Title -->
+        @if (Header != null)
+        {
+            <div class="box-header">
+                <div class="info">
+                    <span><b>@Header</b></span>
+                </div>
+                <div class="date">
+                    <span><b>@TopHead</b></span>
+                </div>
+            </div>
+            <div class="line"></div>
+        }
+
+        <!-- Content -->
+        @if (IsFullContent)
+        {
+            <div class="box-content shadow-style @ContentClass" style="display:flex; flex-direction: column; @ContentStyle">
+                <!-- We can have as many RenderFragment as we want for contents as we want -->
+                @Content
+            </div>
+        }
+        else
+        {
+            <div class="box-content shadow-style @ContentClass" style="@ContentStyle">
+                <!-- We can have as many RenderFragment as we want for contents as we want -->
+                @Content
+            </div>
+        }
+
+        <!-- Footer -->
+        @if (Footer != null)
+        {
+            <div class="line"></div>
+
+            
+            <div class="box-footer">
+                @Footer
+            </div>
+        }
+    </div>
+</div>
