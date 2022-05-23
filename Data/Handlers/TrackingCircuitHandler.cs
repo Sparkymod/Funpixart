@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components.Server.Circuits;
 
-namespace BSATemplateNet6.Data.Handlers
+namespace Funpixart.Data.Handlers
 {
     public class TrackingCircuitHandler : CircuitHandler
     {

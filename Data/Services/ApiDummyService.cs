@@ -1,4 +1,4 @@
-﻿namespace BSATemplateNet6.Data.Services
+﻿namespace Funpixart.Data.Services
 {
     public class ApiDummyService
     {

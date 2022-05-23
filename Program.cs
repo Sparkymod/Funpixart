@@ -13,7 +13,7 @@ builder.Services.AddRDKNotification();
 // All Services Available in Data.Services
 builder.Services.AddAllServicesAvailable(@namespace);
 // Logger
-builder.Host.UseSerilog(BSATemplateNet6.Settings.InitializeSerilog());
+builder.Host.UseSerilog(Funpixart.Settings.InitializeSerilog());
 // Custom URL
 builder.WebHost.UseUrls(builder.Configuration["UseUrls"]);
 

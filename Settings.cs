@@ -3,7 +3,7 @@ using Serilog.Core;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
 
-namespace BSATemplateNet6
+namespace Funpixart
 {
     public static class Settings
     {
