@@ -441,6 +441,16 @@ table {
         color: #313030;
     }
 
-        table td:first-of-type {
-            text-align: center;
-        }
+th, td {
+    min-width: 3rem !important;
+}
+
+    td:first-of-type {
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
+
+    td:last-of-type {
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
