@@ -1,5 +1,16 @@
-﻿@inherits LayoutComponentBase
+﻿@using Funpixart.Components.Notification
+@using Funpixart.Data.Services
+@inherits LayoutComponentBase
 
-<PageTitle>Funpixart</PageTitle>
+@inject IJSServices JSServices
+@inject INotificationService Notification
+
+<PageTitle>Funpixart MC</PageTitle>
+
+<CascadingValue Value="@JSServices">
+    <CascadingValue Value="@Notification">
+        <Funpixart.Pages.Header />
+    </CascadingValue>
+</CascadingValue>
 
 @Body

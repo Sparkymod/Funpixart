@@ -8,25 +8,22 @@ var @namespace = AppDomain.CurrentDomain.FriendlyName;
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-// Notification
-builder.Services.AddRDKNotification();
+
 // All Services Available in Data.Services
 builder.Services.AddAllServicesAvailable(@namespace);
+
+// Notification
+builder.Services.AddRDKNotification();
+
+// JS Functions Services
+builder.Services.AddJSService();
+
 // Logger
 builder.Host.UseSerilog(Funpixart.Settings.InitializeSerilog());
+
 // Custom URL
 builder.WebHost.UseUrls(builder.Configuration["UseUrls"]);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Version = "v1",
-        Title = "BSATemplateApi Swagger",
-        Description = "A Template Swagger doc for this template"
-    });
-});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,11 +31,6 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
 }
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blazor API V1");
-});
 
 app.UseStaticFiles();
 app.UseSerilogRequestLogging();

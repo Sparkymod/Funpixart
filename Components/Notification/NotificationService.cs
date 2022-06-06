@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace RDK.Components.Notification
+namespace Funpixart.Components.Notification
 {
     public interface INotificationService
     {
@@ -8,6 +8,8 @@ namespace RDK.Components.Notification
         void Notify(NotificationMessage message);
         void Notify(NotificationType severity);
         void Notify(NotificationType severity, string content);
+        void Notify<T>(NotificationType severity, string content);
+        void Notify(NotificationType severity, string content, int duration);
         void Notify(NotificationType severity, string content, string footer);
     }
 
@@ -37,6 +39,21 @@ namespace RDK.Components.Notification
         /// <param name="severity">Notification type.</param>
         /// <param name="content">Message of the notification.</param>
         public void Notify(NotificationType severity, string content) => Notify(new NotificationMessage() { Message = content, Severity = severity });
+
+        /// <summary>
+        /// Notify with notification type and a content.
+        /// </summary>
+        /// <param name="severity">Notification type.</param>
+        /// <param name="content">Message of the notification.</param>
+        public void Notify<T>(NotificationType severity, string content) => Notify(new NotificationMessage() { Message = content, Severity = severity, Footer = typeof(T).Name });
+
+        /// <summary>
+        /// Notify with notification type, content and more than 5 seconds.
+        /// </summary>
+        /// <param name="severity">Notification type.</param>
+        /// <param name="content">Message of the notification.</param>
+        /// <param name="duration">Duration in seconds of the notification before it disapears.</param>
+        public void Notify(NotificationType severity, string content, int duration) => Notify(new NotificationMessage() { Message = content, Severity = severity, Duration = duration * 1000 });
 
         /// <summary>
         /// Notify with notification type, content and footer.

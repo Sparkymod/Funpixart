@@ -1,15 +1,13 @@
-﻿using RDK.Components.Notification;
+﻿using Funpixart.Components.Notification;
 using Microsoft.AspNetCore.Components;
 using Serilog;
 
-namespace RDK.Components.Notification
+namespace Funpixart.Components.Notification
 {
     public partial class RDKNotification
     {
-        [Parameter]
-        public NotificationMessage Message { get; set; }
-        [Inject]
-        private INotificationService Service { get; set; }
+        [Parameter] public NotificationMessage Message { get; set; }
+        [Inject] private INotificationService Service { get; set; }
 
         public bool Visible { get; set; } = true;
 

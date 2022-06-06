@@ -1,4 +1,4 @@
-﻿namespace RDK.Components.Notification
+﻿namespace Funpixart.Components.Notification
 {
     public enum NotificationType
     {

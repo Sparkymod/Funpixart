@@ -1,25 +1,128 @@
 ﻿@page "/"
-@inject INotificationService NotificationService
 
-<PageTitle>Index</PageTitle>
+<section>
+    <div class="info-container">
+        <div class="info-item">
+            <i class="fa-solid fa-rocket icon"></i>
+            <p>Nuestra Historia</p>
+            <p>Este proyecto surge de la nostalgia y el staff de un querido servidor llamado Worldcrafteros. Un día, entre amigos, 
+                surgió la charla y comenzamos a recordar esos buenos momentos que pasamos en esas épocas bonitas donde las cosas eran más fáciles de llevar 
+                y la vida era menos complicada! Pero esos momentos se pueden crear con una buena comunidad, 
+                pasando el rato y escapando de lo que nos perturba en el día a día. </p>
+                <p><b>Qué esperas para unirte ?!</b></p>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-users-line icon"></i>
+            <p>El Staff</p>
+            <p>Somos un equipo conformado por 4 personas </p>
+            <div class="info-staff">
+                <div class="staff">
+                    <div>
+                        <p></p>
+                        <p class="badge badge-danger2">[Owner]</p>
+                    </div>
+                    <b>Shaditos</b>
+                </div>
+                <hr />
+                <div class="staff">
+                    <div>
+                        <p></p>
+                        <p class="badge badge-danger2">[Co-Owner]</p>
+                        <p class="badge badge-success">[Directora de staff]</p>
+                    </div>
+                    <b>KathyFox</b>
+                </div>
+                <hr />
+                <div class="staff">
+                    <div>
+                        <p></p>
+                        <p class="badge badge-danger2">[Co-Owner]</p>
+                        <p class="badge badge-info2">[Dev]</p>
+                    </div>
+                    <b>Rafamod</b>
+                </div>
+                <hr />
+                <div class="staff">
+                    <div>
+                        <p></p>
+                        <p class="badge badge-info2">[Dev]</p>
+                    </div>
+                    <b>Matt04</b>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fa-brands fa-discord icon"></i>
+            <p>Discord</p>
+            <a href="https://discord.funpixart.net" target="_blank"> <p class="btn-1">Join the community!</p></a>
+        </div>
+    </div>
+</section>
+<section id="gamemode">
+    <div class="info-container bg-1">
+        <div class="info-title">
+            <h2>Modos de Juegos</h2>
+        </div>
+        <div class="info-sub-container">
+            <div class="info-game-item">
+                <div class="info-item">
+                    <p>Survival</p>
+                    <p>Descripción.</p>
+                </div>
+                <div class="info-item">
+                    <img src="img/Logo.png" alt="img">
+                </div>
+            </div>
+            <div class="info-game-item flex-reverse">
+                <div class="info-item">
+                    <p>Arcade</p>
+                    <p>Descripción</p>
+                </div>
+                <div class="info-item">
+                    <img src="img/Logo.png" alt="img">
+                </div>
+            </div>
+            <div class="info-game-item">
+                <div class="info-item">
+                    <p>Skyblock</p>
+                    <p>Descripción</p>
+                </div>
+                <div class="info-item">
+                    <img src="img/Logo.png" alt="img">
+                </div>
+            </div>
+            <div class="info-game-item flex-reverse">
+                <div class="info-item">
+                    <p>Among Us</p>
+                    <p>Descripción</p>
+                </div>
+                <div class="info-item">
+                    <img src="img/Logo.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<h1>Hello, world!</h1>
+<section id="about">
+    <div class="info-container">
+        <div class="info-item">
+            <i class="fa-regular fa-circle-question icon"></i>
+            <p>Estas buscando un lugar para divertirte?</p>
+            <p>Aquí te ofreceremos un rato de diversión, donde la comunidad es nuestra prioridad! 
+                Esperamos que la pases bien y que almenos te saquemos una sonrisa! <i class="far fa-laugh-squint"></i></p>
 
-Welcome to your new app.
-
-<button @onclick=Show>Show notification</button>
-
-@code{
-    void Show()
-    {
-        var message = new NotificationMessage()
-            {
-                Duration = 5000,
-                Severity = NotificationType.Warning,
-                Message = "Something went wrong.",
-                Footer = "Warning => [W01AC03]"
-            };
-
-        NotificationService.Notify(message);
-    }
-}
+        </div>
+        <div class="info-item">
+            <p><i class="fa-regular fa-copyright"></i> Funpixart, Inc.</p>
+            <p>Todos los derechos reservados - All Rights Reserved.</p>
+        </div>
+    </div>
+    <div style="text-align: center; padding-bottom: 1rem; font-size: 14px;">
+        <p>
+            Website made by
+            <a href="https://github.com/sparkymod" target="_blank"> <i class="fa-brands fa-github"></i> Sparkymod</a>
+        </p>
+    </div>
+</section>

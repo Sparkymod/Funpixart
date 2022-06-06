@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MineStat" Version="2.1.1" />
     <PackageReference Include="Serilog" Version="2.11.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
@@ -39,7 +40,6 @@
 
   <ItemGroup>
     <None Include="Components\Boxes\Boxflex.razor" />
-    <None Include="Components\Boxes\BoxStatus.razor" />
     <None Include="Components\Boxes\Modal.razor" />
     <None Include="Components\ErrorHandler\ErrorHandler.razor" />
     <None Include="Components\Notification\NotificationWrapper.razor" />

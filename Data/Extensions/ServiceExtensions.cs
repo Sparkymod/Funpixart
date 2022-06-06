@@ -1,6 +1,7 @@
-﻿using Microsoft.JSInterop;
+﻿using Funpixart.Data.Services;
+using Microsoft.JSInterop;
+using Funpixart.Components.Notification;
 using System.Reflection;
-using RDK.Components.Notification;
 
 namespace RDK.Data.Extensions
 {
@@ -17,6 +18,11 @@ namespace RDK.Data.Extensions
             {
                 services.AddScoped(service);
             }
+        }
+
+        public static void AddJSService(this IServiceCollection services)
+        {
+            services.AddScoped<IJSServices, JSFunctionsServices>();
         }
 
         /// <summary>
