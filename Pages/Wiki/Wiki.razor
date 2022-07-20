@@ -1,0 +1,165 @@
+﻿@page "/wiki"
+
+@layout DocsLayout
+
+<PageTitle>Funpixart MC - Wiki</PageTitle>
+
+<div stlye="display:flex;">
+
+    <h2>Items</h2>
+    <table class="wikitable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Utilidad</th>
+                <th>Receta</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div style=" display: flex; align-items: center; flex-wrap: wrap; gap:0.6rem;">
+                        <img src="/wiki/Items/sm_backpack_item.png" />
+                        <span>Mochila Pequeña</span>
+                    </div>
+                </td>
+                <td>
+                    Contiene 18 slots para guardar tus cosas!
+                </td>
+                <td><img src="/wiki/Items/sm_backpack.png" width="120px" height="140px" /></td>
+                <td>
+                    <ul>
+                        <li><span><b>3x</b> Cuero </span></li>
+                        <li><span><b>2x</b> (Cualquier) Madera</span></li>
+                        <li><span><b>4x</b> Lingote de Hierro </span></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div style=" display: flex; align-items: center; flex-wrap: wrap; gap:0.6rem;">
+                        <img src="/wiki/Items/md_backpack_item.png" />
+                        <span>Mochila Mediana</span>
+                    </div>
+                </td>
+                <td>
+                    Contiene 27 slots para guardar tus cosas!
+                </td>
+                <td><img src="/wiki/Items/m_backpack.png" width="120px" height="140px" /></td>
+                <td>
+                    <ul>
+                        <li><span><b>3x</b> Cuero Chamuscado </span></li>
+                        <li><span><b>1x</b> Cofre </span></li>
+                        <li><span><b>3x</b> Diamantes </span></li>
+                        <li><span><b>2x</b> Hierro UltraFino </span></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div style=" display: flex; align-items: center; flex-wrap: wrap; gap:0.6rem;">
+                        <img src="/wiki/Items/l_backpack_item.png" />
+                        <span>Mochila Grande</span>
+                    </div>
+                </td>
+                <td>
+                    Contiene 36 slots para guardar tus cosas!
+                </td>
+                <td><img src="/wiki/Items/l_backpack.png" width="120px" height="140px" /></td>
+                <td>
+                    <ul>
+                        <li><span><b>3x</b> Cuero Chamuscado </span></li>
+                        <li><span><b>2x</b> Diamantes Enriquecido</span></li>
+                        <li><span><b>1x</b> Cofre Mejorado </span></li>
+                        <li><span><b>3x</b> Hierro UltraFino </span></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div style=" display: flex; align-items: center; flex-wrap: wrap; gap:0.6rem;">
+                        <img src="/wiki/Items/xl_backpack_item.png" />
+                        <span>Mochila Pequeña</span>
+                    </div>
+                </td>
+                <td>
+                    Contiene 54 slots para guardar tus cosas!
+                </td>
+                <td><img src="/wiki/Items/xl_backpack.png" width="120px" height="140px" /></td>
+                <td>
+                    <ul>
+                        <li><span><b>6x</b> Lana Refinada </span></li>
+                        <li><span><b>1x</b> Cofre Mejorado </span></li>
+                        <li><span><b>2x</b> Cenizas Del inframundo </span></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Misiones</h2>
+    <table class="wikitable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Trabajo requerido</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>El secreto está en la bolsa</td>
+                <td><b>Cazador</b></td>
+                <td><img src="/wiki/Quests/chest_mejorado.png" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Crafting</h2>
+    <table class="wikitable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Material requerido</th>
+                <th>Tiempo de proceso</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hierro Enriquecido</td>
+                <td>Lingote de Hierro</td>
+                <td><b>3 Minutos en el Horno</b></td>
+                <td><img src="/wiki/Smelt/hierro_enriquecido.png" /></td>
+            </tr>
+            <tr>
+                <td>Hierro Ultrafino</td>
+                <td>2x Hierro Enriquecido</td>
+                <td><b>Inmediato, en el Smithing Table</b></td>
+                <td><img src="/wiki/Smelt/hierro_ultrafino.png" /></td>
+            </tr>
+            <tr>
+                <td>Cuero Chamuscado</td>
+                <td>Cuero</td>
+                <td><b>1 Minuto en el Horno</b></td>
+                <td><img src="/wiki/Smelt/cuero_chamuscado.png" /></td>
+            </tr>
+            <tr>
+                <td>Diamante Enriquecido</td>
+                <td>Diamante</td>
+                <td><b>5 Minutos en el Horno</b></td>
+                <td><img src="/wiki/Smelt/diamante_enriquecido.png" /></td>
+            </tr>
+            <tr>
+                <td>Cenizas del Inframundo</td>
+                <td>Bloque de Netherite</td>
+                <td><b>10 Minutos en el Horno</b></td>
+                <td><img src="/wiki/Smelt/cenizas_del_inframundo.png" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

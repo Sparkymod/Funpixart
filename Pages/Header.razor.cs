@@ -12,7 +12,7 @@ namespace Funpixart.Pages
         [CascadingParameter] public IJSServices JSServices { get; set; }
         [CascadingParameter] public INotificationService Notification { get; set; }
 
-        public MineStat? Stats { get; protected set; } = new("mc.funpixart.net", 25565);
+        //public MineStat? Stats { get; protected set; } = new("mc.funpixart.net", 25565);
 
         async Task CopyToClipboard()
         {

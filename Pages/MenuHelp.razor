@@ -1,0 +1,17 @@
+﻿<div class="sub-menu ">
+    <div class="title">
+        <span>@Title</span>
+    </div>
+    <hr class="w" />
+    <div class="content">
+        <a href="/rules/" class="blockLink @(ActiveMenu == 1 ? "active" : null)">Reglas generales</a>
+        <a href="/privacy/" class="blockLink @(ActiveMenu == 2 ? "active" : null)">Políticas de privacidad</a>
+        <a href="/terms/" class="blockLink @(ActiveMenu == 3 ? "active" : null)">Términos y condiciones</a>
+    </div>
+</div>
+
+@code{
+    [Parameter] public string Title { get; set; } = "Menu Ayuda";
+    [Parameter] public int ActiveMenu { get; set; } = 0;
+
+}

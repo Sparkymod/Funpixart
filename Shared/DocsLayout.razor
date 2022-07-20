@@ -1,0 +1,43 @@
+﻿@using Funpixart.Components.Notification
+@using Funpixart.Data.Services
+
+@inherits LayoutComponentBase
+
+<PageTitle>Funpixart MC - Documentos</PageTitle>
+
+<header class="bg2">
+    <div class="container" style="padding: 5rem 0; flex-direction:row;">
+        <div class="logo">
+            <img src="img/logo2.png" alt="MyServer logo">
+        </div>
+    </div>
+</header>
+<div class="bottom-black-line"></div>
+<div class="header-menu"> 
+    <a href="/" style="color:#fff;"><span>Home</span></a>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: 1rem;">
+        <a href="https://www.youtube.com/c/Funpixart" target="_blank">
+            <i class="fa-brands fa-youtube icon" style="color:#FF0000;"></i>
+        </a>
+        <a href="https://www.facebook.com/funpixart" target="_blank">
+            <i class="fa-brands fa-facebook icon" style="color:#4267B2;"></i>
+        </a>
+        <a href="https://www.twitch.tv/funpixart" target="_blank">
+            <i class="fa-brands fa-twitch icon" style="color:#6441a5;"></i>
+        </a>
+        <a href="https://twitter.com/funpixart" target="_blank">
+            <i class="fa-brands fa-twitter icon" style="color:#1DA1F2;"></i>
+        </a>
+        <a href="https://www.instagram.com/funpixart/" target="_blank">
+            <i class="fa-brands fa-instagram icon" style="color:#C13584;"></i>
+        </a>
+        <a href="https://discord.funpixart.net" target="_blank">
+            <i class="fa-brands fa-discord icon" style="color:#5865F2;"></i>
+        </a>
+    </div>
+</div>
+<div class="help-container">
+    @Body
+</div>
+
+<Funpixart.Pages.Footer />
