@@ -36,8 +36,8 @@
         </div>
         <div class="playercount">
             <p>
-                @*Join <span class="sip">@Stats?.CurrentPlayers</span> other players on <span class="ip" @onclick=CopyToClipboard> mc.funpixart.net</span>*@
-                Join <span class="sip">9</span> other players on <span class="ip" @onclick=CopyToClipboard> mc.funpixart.net</span>
+                Join <span class="sip">@(Stats?.CurrentPlayers ?? "0")</span> other players on <span class="ip" @onclick=CopyToClipboard> mc.funpixart.net</span>
+                @*Join <span class="sip">9</span> other players on <span class="ip" @onclick=CopyToClipboard> mc.funpixart.net</span>*@
             </p>
         </div>
     </div>

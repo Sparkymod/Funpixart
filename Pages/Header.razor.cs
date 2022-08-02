@@ -12,14 +12,20 @@ namespace Funpixart.Pages
         [CascadingParameter] public IJSServices JSServices { get; set; }
         [CascadingParameter] public INotificationService Notification { get; set; }
 
-        //public MineStat? Stats { get; protected set; } = new("mc.funpixart.net", 25565);
+        public MineStat? Stats { get; protected set; }
+
+        protected override void OnInitialized()
+        {
+            Task.Delay(1500);
+            Stats = new("mc.funpixart.net", 25565);
+            base.OnInitialized();
+        }
 
         async Task CopyToClipboard()
         {
             // Writing to the clipboard may be denied, so you must handle the exception
             try
             {
-                
                 await JSServices.WriteTextAsync("mc.funpixart.net");
                 Notification.Notify(NotificationType.Success, "Copied!","System");
             }
