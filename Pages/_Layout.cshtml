@@ -32,6 +32,15 @@ Skyblock, Survival, Arcade, Among Us y más por implementar! Ven a descubrir lo 
     <link rel="stylesheet" href="@(nameof(Funpixart)).styles.css" />
 
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYBBF82B15"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KYBBF82B15');
+    </script>
 </head>
 <body class="notranslate">
     @RenderBody()
@@ -47,6 +56,6 @@ Skyblock, Survival, Arcade, Among Us y más por implementar! Ven a descubrir lo 
         <a class="dismiss">🗙</a>
     </div>
 
-    <script src="_framework/blazor.server.js"></script>
+<script src="_framework/blazor.server.js"></script>
 </body>
 </html>
