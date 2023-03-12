@@ -17,7 +17,7 @@ namespace Funpixart.Pages
         protected override void OnInitialized()
         {
             Task.Delay(1500);
-            Stats = new("mc.funpixart.net", 25565);
+            //Stats = new("mc.funpixart.net", 25565);
             base.OnInitialized();
         }
 
@@ -26,7 +26,7 @@ namespace Funpixart.Pages
             // Writing to the clipboard may be denied, so you must handle the exception
             try
             {
-                await JSServices.WriteTextAsync("mc.funpixart.net");
+                await JSServices.WriteTextAsync("https://rafamod.com");
                 Notification.Notify(NotificationType.Success, "Copied!","System");
             }
             catch
