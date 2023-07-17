@@ -32,10 +32,12 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
 }
 
+app.UsePathBase("/funpixart");
+
 app.UseStaticFiles();
 app.UseSerilogRequestLogging();
 app.UseRouting();
 app.MapBlazorHub();
-app.MapFallbackToPage("{*path}", "/_Host");
+app.MapFallbackToPage("/_Host");
 
 app.Run();

@@ -1,4 +1,6 @@
-﻿<section id="about">
+﻿@inject NavigationManager UriHelper
+
+<section id="about">
     <div class="info-container">
         <div class="info-item">
             <i class="fa-regular fa-circle-question icon"></i>
@@ -20,9 +22,9 @@
     </div>
     <div style="text-align: center; padding-bottom: 1rem; font-size: 15px;">
         <p>
-            <a href="/rules" target="_blank"> Normas y sanciones</a> |
-            <a href="/privacy" target="_blank"> Políticas de privacidad</a> |
-            <a href="/terms" target="_blank"> Términos y condiciones</a>
+            <a href="@(UriHelper.BaseUri + "rules")" target="_blank"> Normas y sanciones</a> |
+            <a href="@(UriHelper.BaseUri + "privacy")" target="_blank"> Políticas de privacidad</a> |
+            <a href="@(UriHelper.BaseUri + "terms")" target="_blank"> Términos y condiciones</a>
         </p>
         <p style="font-size: 13px;">Website made by
             <a href="https://github.com/sparkymod" target="_blank"> <i class="fa-brands fa-github"></i> Sparkymod</a></p>

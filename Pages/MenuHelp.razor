@@ -4,9 +4,9 @@
     </div>
     <hr class="w" />
     <div class="content">
-        <a href="/rules/" class="blockLink @(ActiveMenu == 1 ? "active" : null)">Reglas generales</a>
-        <a href="/privacy/" class="blockLink @(ActiveMenu == 2 ? "active" : null)">Políticas de privacidad</a>
-        <a href="/terms/" class="blockLink @(ActiveMenu == 3 ? "active" : null)">Términos y condiciones</a>
+        <a href="@(UriHelper.BaseUri + "rules")" class="blockLink @(ActiveMenu == 1 ? "active" : null)">Reglas generales</a>
+        <a href="@(UriHelper.BaseUri + "privacy")" class="blockLink @(ActiveMenu == 2 ? "active" : null)">Políticas de privacidad</a>
+        <a href="@(UriHelper.BaseUri + "terms")" class="blockLink @(ActiveMenu == 3 ? "active" : null)">Términos y condiciones</a>
     </div>
 </div>
 

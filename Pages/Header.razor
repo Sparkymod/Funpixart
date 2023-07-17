@@ -1,4 +1,4 @@
-﻿
+﻿@inject NavigationManager UriHelper
 <header class="bg">
     <div class="container">
         <div class="logo">
@@ -26,7 +26,7 @@
                     <p class="title">About Us</p>
                 </div>
             </a>
-            <a href="/vote" class="item">
+            <a href="@(UriHelper.BaseUri + "vote")" class="item">
                 <div class="img">
                     <p class="subtitle">Vote for credits</p>
                     <i class="fa-solid fa-check-to-slot icon-h"></i>
