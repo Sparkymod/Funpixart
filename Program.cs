@@ -32,7 +32,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
 }
 
-app.UsePathBase("/funpixart");
+app.UsePathBase("/projects/funpixart-mc");
 
 app.UseStaticFiles();
 app.UseSerilogRequestLogging();
